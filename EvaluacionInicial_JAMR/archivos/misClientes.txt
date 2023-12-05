@@ -1,1 +1,1 @@
-Cliente{id_cliente=5, nombre=pepe, direccion=pez, telefono=125412541}
+Cliente{id_cliente=4, nombre=juan, direccion=paz, telefono=65247815}
