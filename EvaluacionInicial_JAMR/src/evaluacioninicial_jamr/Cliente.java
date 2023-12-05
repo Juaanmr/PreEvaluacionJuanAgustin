@@ -48,15 +48,17 @@ public class Cliente {
     public void guardarDatos() {
         //nombre del fichero y ubicacion de donde se va a crear 
         String fichero = "archivos/misClientes.txt";
-        
+        //creacion del objeto file que representa el fichero donde se guardaran los datos 
         File archivo = new File(fichero);
         
         //si el fichero ya existe sale este mensaje y se añade al nuevo cliente
         if(archivo.exists())
             System.out.println("\nEl fichero ya existe en esa ubicacion\n");
         try(BufferedWriter escritura = new BufferedWriter(new FileWriter(fichero))){
+            //escribe la informacion del cliente en el fichero
             escritura.write(toString());
         } catch (Exception e) {
+            //excepcion por si hay algun error derante la escritura del fichero
             e.printStackTrace();
         } 
     }
